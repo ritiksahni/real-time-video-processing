@@ -16,7 +16,7 @@ class VideoStreamer:
         self.running = True
         
         # Initialize video capture
-        self.cap = cv2.VideoCapture(0)  # 0 is usually the built-in webcam
+        self.cap = cv2.VideoCapture('./test_test.mkv')  # 0 is usually the built-in webcam
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, width)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, height)
         self.cap.set(cv2.CAP_PROP_FPS, fps)
@@ -76,9 +76,9 @@ class VideoStreamer:
 
         # Uncomment the following line to show the WebSocket status on the frame
 
-        status_text = "WebSocket: Connected" if self.ws_connected else "WebSocket: Disconnected"
-        cv2.putText(frame, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
-                    1, status_color, 2, cv2.LINE_AA)
+        # status_text = "WebSocket: Connected" if self.ws_connected else "WebSocket: Disconnected"
+        # cv2.putText(frame, status_text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 
+        #             1, status_color, 2, cv2.LINE_AA)
         
         # Add the current message
         cv2.putText(frame, self.msg, (10, 70), cv2.FONT_HERSHEY_SIMPLEX, 

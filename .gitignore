@@ -175,3 +175,6 @@ etc/
 share/
 .venv
 pip-selfcheck.json
+
+# For test video file.
+test_test.mkv
